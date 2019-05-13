@@ -1,7 +1,7 @@
 const dummyData = [
     {
         id: 1,
-        sanderId: "perborgen",
+        senderId: "perborgen",
         text: "who'll win?"
     },
     {

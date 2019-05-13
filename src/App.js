@@ -1,6 +1,8 @@
 import React from 'react';
 import dummyData from './components/dummy-data';
 import MessageList from './components/MessageList';
+import '@atlaskit/css-reset';
+import './styles/index.css';
 
 class App extends React.Component {
     constructor(props) {
@@ -14,7 +16,7 @@ class App extends React.Component {
         console.log(this.state.messages);
         return (
             <div className="app">
-                <MessageList messages={this.state.dummyData} />
+                <MessageList messages={this.state.messages} />
             </div>
         );
     }
