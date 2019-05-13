@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@atlaskit/css-reset": "^4.0.1",
-    "chatkit": "0.0.1-security",
+    "@pusher/chatkit": "^0.7.18",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
