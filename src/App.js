@@ -21,27 +21,25 @@ class App extends React.Component {
             tokenProvider: new TokenProvider({ 
                 url: tokenUrl 
             })
-        })
-
-        // chatManager.connect().then(currentUser => {
-        //     currentUser.subscribeToRoom({
-        //         roomId: 21153976,
-        //         hooks: {
-        //             onNewMessage: message => {
-        //                 console.log('message.text', message.text);
-        //             }
-        //         }
-        //     })
-        // })
+        });
         chatManager.connect()
         .then(currentUser => {
+            currentUser.subscribeToRoom({
+                roomId: '21153976',
+                hooks: {
+                  onMessage: message => {
+                    this.setState({
+                        messages: [...this.state.messages, message]
+                    });
+                  }
+                }
+              });
             console.log('Successful connection', currentUser)
         }).catch(err => {
             console.log('Error on connection', err)
-        })
+        });
     }
     render() {
-        console.log(this.state.messages);
         return (
             <div className="app">
                 <MessageList messages={this.state.messages} />
