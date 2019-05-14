@@ -1,12 +1,12 @@
 const dummyData = [
     {
         id: 1,
-        senderId: "perborgen",
+        senderId: "Perborgen",
         text: "who'll win?"
     },
     {
         id: 2,
-        senderId: "janedoe",
+        senderId: "Janedoe",
         text: "who'll win?"
     }
 ];

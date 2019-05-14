@@ -1,14 +1,10 @@
 import React from 'react';
 import dummyData from './components/dummy-data';
 import MessageList from './components/MessageList';
-import Chatkit from "@pusher/chatkit";
+import { ChatManager, TokenProvider } from '@pusher/chatkit-client';
 import '@atlaskit/css-reset';
 import './styles/index.css';
-
-const instanceLocator = "v1:us1:abe8898e-8cfc-405b-899f-b428533baa64";
-const testToken = "https://us1.pusherplatform.io/services/chatkit-token-provider/v1/abe8898e-8cfc-405b-899f-b428533baa64/token";
-const username = "Perborgen";
-const roomId = 21148281;
+import {instanceLocator, tokenUrl} from './config';
 
 class App extends React.Component {
     constructor(props) {
@@ -18,30 +14,31 @@ class App extends React.Component {
             messages: dummyData
         };
     }
-    componentDidMount() {
-        const chatManager = new Chatkit.ChatManager({
+    componentDidMount(){
+        const chatManager = new ChatManager({
             instanceLocator: instanceLocator,
-            userId: 'janedoe',
-            tokenProvider: new Chatkit.TokenProvider({
-                url: testToken
+            userId: 'Perborgen',
+            tokenProvider: new TokenProvider({ 
+                url: tokenUrl 
             })
         })
 
+        // chatManager.connect().then(currentUser => {
+        //     currentUser.subscribeToRoom({
+        //         roomId: 21153976,
+        //         hooks: {
+        //             onNewMessage: message => {
+        //                 console.log('message.text', message.text);
+        //             }
+        //         }
+        //     })
+        // })
         chatManager.connect()
-            .then(currentUser => {
-                this.currentUser = currentUser
-                this.currentUser.subscribeToRoom({
-                    roomId: roomId,
-                    hooks: {
-                        onNewMessage: message => {
-
-                            this.setState({
-                                messages: [...this.state.messages, message]
-                            })
-                        }
-                    }
-                })
-            })
+        .then(currentUser => {
+            console.log('Successful connection', currentUser)
+        }).catch(err => {
+            console.log('Error on connection', err)
+        })
     }
     render() {
         console.log(this.state.messages);
