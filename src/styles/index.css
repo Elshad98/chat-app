@@ -30,13 +30,13 @@ body {
   margin: 15px 0;
 }
 
-.message div:nth-child(1) {
+.message-username {
   font-size: 11px;
   color: var(--main-text-color);
   opacity: 0.9;
   margin-bottom: 6px;
 }
-.message div:nth-child(2) {
+.message-text {
   background: var(--main-color);
   color: var(--secondary-color);
   display: inline;
@@ -75,5 +75,5 @@ body {
 }
 
 .send-message-form input::placeholder {
-  color: black;
+  color: #737f8d;
 }

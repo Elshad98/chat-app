@@ -1,5 +1,6 @@
 import React from 'react';
 import MessageList from './components/MessageList';
+import SendMessageForm from './components/SendMessageForm';
 import { ChatManager, TokenProvider } from '@pusher/chatkit-client';
 import '@atlaskit/css-reset';
 import './styles/index.css';
@@ -41,6 +42,7 @@ class App extends React.Component {
         return (
             <div className="app">
                 <MessageList messages={this.state.messages} />
+                <SendMessageForm />
             </div>
         );
     }
