@@ -1,5 +1,4 @@
 import React from 'react';
-import dummyData from './components/dummy-data';
 import MessageList from './components/MessageList';
 import { ChatManager, TokenProvider } from '@pusher/chatkit-client';
 import '@atlaskit/css-reset';
@@ -11,7 +10,7 @@ class App extends React.Component {
         super(props);
 
         this.state = {
-            messages: dummyData
+            messages: []
         };
     }
     componentDidMount(){
@@ -33,8 +32,7 @@ class App extends React.Component {
                     });
                   }
                 }
-              });
-            console.log('Successful connection', currentUser)
+            });
         }).catch(err => {
             console.log('Error on connection', err)
         });
