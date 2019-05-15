@@ -2,6 +2,7 @@ import React from 'react';
 import MessageList from './components/MessageList';
 import SendMessageForm from './components/SendMessageForm';
 import RoomList from './components/RoomList';
+import NewRoomForm from './components/NewRoomForm';
 
 import {instanceLocator, tokenUrl} from './config';
 import { ChatManager, TokenProvider } from '@pusher/chatkit-client';
@@ -93,6 +94,7 @@ class App extends React.Component {
                 />
                 <MessageList messages={this.state.messages} />
                 <SendMessageForm sendMessage={this.sendMessage} />
+                <NewRoomForm />
             </div>
         );
     }
