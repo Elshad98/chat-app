@@ -10,6 +10,7 @@ class MessageList extends React.Component{
 	}
 
 	renderDisplay(){
+		const messages = this.props.messages;
 		return (
 			<div className="message-list">
 				{messages.map((message, index) => (
@@ -22,20 +23,15 @@ class MessageList extends React.Component{
 	renderInfo(){
 		return (
 			<div className="message-list">
-				<div className="join-room"></div>
+				<div className="join-room">
+					&larr; Join a room!
+				</div>
 			</div>
 		);
 	}
 
 	render(){
-		const messages = this.props.messages;
-		return (
-			<div className="message-list">
-				{messages.map((message, index) => (
-					<Message key={index} username={message.senderId} text={message.text}/>
-				))}
-			</div>
-		);
+		return this.props.roomId ? this.renderDisplay() : this.renderInfo();
 	}
 }
 
