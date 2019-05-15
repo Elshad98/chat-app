@@ -9,10 +9,10 @@ import {instanceLocator, tokenUrl} from './config';
 class App extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             messages: []
         };
+        this.sendMessage = this.sendMessage.bind(this);
     }
     componentDidMount(){
         const chatManager = new ChatManager({
@@ -24,7 +24,8 @@ class App extends React.Component {
         });
         chatManager.connect()
         .then(currentUser => {
-            currentUser.subscribeToRoom({
+            this.currentUser = currentUser;
+            this.currentUser.subscribeToRoom({
                 roomId: '21153976',
                 hooks: {
                   onMessage: message => {
@@ -38,11 +39,17 @@ class App extends React.Component {
             console.log('Error on connection', err)
         });
     }
+    sendMessage(text){
+        this.currentUser.sendMessage({
+            text: text,
+            roomId: '21153976'
+        });
+    }
     render() {
         return (
             <div className="app">
                 <MessageList messages={this.state.messages} />
-                <SendMessageForm />
+                <SendMessageForm sendMessage={this.sendMessage} />
             </div>
         );
     }

@@ -7,6 +7,7 @@ class SendMessageForm extends React.Component{
             message: ''
         };
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(evt){
@@ -15,9 +16,19 @@ class SendMessageForm extends React.Component{
         });
     }
 
+    handleSubmit(evt){
+        evt.preventDefault();
+        this.props.sendMessage(this.state.message);
+        this.setState({
+            message: ''
+        });
+    }
+
     render(){
         return (
-            <form className="send-message-form">
+            <form 
+                className="send-message-form"
+                onSubmit={this.handleSubmit}>
                 <input 
                     onChange={this.handleChange}
                     value={this.state.message}
