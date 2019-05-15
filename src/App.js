@@ -103,9 +103,10 @@ class App extends React.Component {
                 <RoomList 
                     roomId={this.state.roomId}
                     subscribeToRoom={this.subscribeToRoom}
-                    rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]} 
-                />
-                <MessageList messages={this.state.messages} />
+                    rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]} />
+                <MessageList 
+                    messages={this.state.messages}
+                    roomId={this.state.roomId} />
                 <SendMessageForm sendMessage={this.sendMessage} />
                 <NewRoomForm createRoom={this.createRoom} />
             </div>
