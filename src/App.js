@@ -87,8 +87,14 @@ class App extends React.Component {
         });
     }
 
-    createRoom(){
-        // todo
+    createRoom(roomName){
+        this.currentUser.createRoom({
+            name: roomName
+        })
+        .then(room => this.subscribeToRoom(room.id))
+        .catch(err => {
+            console.log('Error with createRoom: ', err);
+        });
     }
 
     render() {
