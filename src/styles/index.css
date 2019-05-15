@@ -5,6 +5,7 @@
   --secondary-text-color: #b0c7d6;
   --send-message-form: #F5F5F5;
 }
+
 html, body {
   height: 100%;
   margin: 0;
@@ -13,6 +14,7 @@ html, body {
   font-weight: 200;
   color: 	#3e5869; 
 }
+
 #root {
   height: 100%;
 }
@@ -23,12 +25,12 @@ html, body {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
   grid-template-areas: 
-      "m m m m m r"
-      "m m m m m r"
-      "m m m m m r"
-      "m m m m m r"
-      "m m m m m r"
-      "s s s s s n";
+      "r m m m m m"
+      "r m m m m m"
+      "r m m m m m"
+      "r m m m m m"
+      "r m m m m m"
+      "n f f f f f";
 }
 
 .new-room-form {
@@ -44,7 +46,7 @@ html, body {
 }
 
 .send-message-form {
-  grid-area: s;
+  grid-area: f;
 }
 
 /* REST OF CSS */
@@ -186,4 +188,3 @@ html, body {
   position: absolute;
   top: 10px;
 }
-

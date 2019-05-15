@@ -2,10 +2,18 @@ import React from 'react';
 
 class RoomList extends React.Component{
     render(){
+        const rooms = this.props.rooms;
         return (
             <div className="rooms-list">
                 <div className="help-text">
-                    RoomList
+                    <ul>
+                        <h3>Your rooms:</h3>
+                        {rooms.map((room) => (
+                            <li key={room.id} className="room">
+                                <a href="#"># {room.name}</a>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         );
