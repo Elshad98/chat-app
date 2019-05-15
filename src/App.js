@@ -22,7 +22,9 @@ class App extends React.Component {
         this.sendMessage = this.sendMessage.bind(this);
         this.subscribeToRoom = this.subscribeToRoom.bind(this);
         this.getRooms = this.getRooms.bind(this);
+        this.createRoom = this.createRoom.bind(this);
     }
+
     componentDidMount(){
         const chatManager = new ChatManager({
             instanceLocator: instanceLocator,
@@ -84,6 +86,11 @@ class App extends React.Component {
             roomId: this.state.roomId
         });
     }
+
+    createRoom(){
+        // todo
+    }
+
     render() {
         return (
             <div className="app">
@@ -94,7 +101,7 @@ class App extends React.Component {
                 />
                 <MessageList messages={this.state.messages} />
                 <SendMessageForm sendMessage={this.sendMessage} />
-                <NewRoomForm />
+                <NewRoomForm createRoom={this.createRoom} />
             </div>
         );
     }
