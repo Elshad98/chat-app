@@ -94,6 +94,10 @@ html, body {
   color: var(--main-text-color);
 }
 
+form{
+  margin: 0;
+}
+
 .new-room-form form {
   height: 100%;
   display: flex;

@@ -107,7 +107,9 @@ class App extends React.Component {
                 <MessageList 
                     messages={this.state.messages}
                     roomId={this.state.roomId} />
-                <SendMessageForm sendMessage={this.sendMessage} />
+                <SendMessageForm 
+                    disabled={this.state.roomId}
+                    sendMessage={this.sendMessage} />
                 <NewRoomForm createRoom={this.createRoom} />
             </div>
         );
