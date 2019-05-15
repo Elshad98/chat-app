@@ -1,10 +1,13 @@
 import React from 'react';
 import MessageList from './components/MessageList';
 import SendMessageForm from './components/SendMessageForm';
+import RoomList from './components/RoomList';
+
+import {instanceLocator, tokenUrl} from './config';
 import { ChatManager, TokenProvider } from '@pusher/chatkit-client';
 import '@atlaskit/css-reset';
 import './styles/index.css';
-import {instanceLocator, tokenUrl} from './config';
+
 
 class App extends React.Component {
     constructor(props) {
@@ -48,6 +51,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="app">
+                <RoomList />
                 <MessageList messages={this.state.messages} />
                 <SendMessageForm sendMessage={this.sendMessage} />
             </div>
