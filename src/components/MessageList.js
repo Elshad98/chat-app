@@ -9,11 +9,11 @@ class MessageList extends React.Component{
 	}
 
 	renderDisplay(){
-		const messages = this.props.messages;
+        const messages = this.props.messages;
 		return (
 			<div className="message-list">
-				{messages.map((message, index) => (
-					<Message key={index} username={message.senderId} text={message.text}/>
+                {messages.map((message, index) => (
+                    <Message key={index} username={message.senderId} text={message.text} />
 				))}
 			</div>
 		);
