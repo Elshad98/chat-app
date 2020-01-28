@@ -64,12 +64,13 @@ html, body {
 }
 
 .rooms-list li {
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
 .rooms-list h3 {
-  margin: 5px 0;
+  margin: 8px 0 20px;
   color: var(--secondary-color);
+  font-size: 22px;
 }
 
 .rooms-list .room button {
@@ -80,7 +81,7 @@ html, body {
   border: none;
   background: transparent;
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .rooms-list .room.active button {
@@ -133,11 +134,11 @@ form{
 }
 
 .message {
-  margin: 15px 0;
+  margin: 15px 5px;
 }
 
 .message .message-username {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--main-text-color);
   opacity: 0.9;
   margin-bottom: 6px;
@@ -145,18 +146,22 @@ form{
 .message .message-text {
   background: var(--main-color);
   color: var(--secondary-color);
-  display: inline;
-  padding: 4px 8px;
+  display: inline-block;
+  padding: 8px 10px;
   border-radius: 8px;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  min-width: 10px;
+  max-width: 660px;
 }
 
 .message-list {
-box-sizing: border-box;
-padding-left: 6px;
-width: 100%;
-height: 100%;
-overflow-y: auto;
-background: var(--secondary-color);
+  box-sizing: border-box;
+  padding-left: 6px;
+  width: calc(100% - 15px);
+  height: 100%;
+  overflow-y: auto;
+  background: var(--secondary-color);
 }
 
 .message-list .join-room {
