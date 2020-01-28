@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
 Chat app in which user can join the room and continue chatting with others.     
 The main purpose of this application is to learn React.js.  
-### Check the demo: [https://elshad98.github.io/chat-app](https://elshad98.github.io/chat-app)       
+Check the demo: [https://elshad98.github.io/chat-app](https://elshad98.github.io/chat-app)       
 
 ## Instructions
 
