@@ -19,7 +19,7 @@ Run it
 ```
 $ npm start
 ```  
-To build the app for production, run the following command  
+To build the app for production, run the following command   
 ```
 $ npm run build
 ```  
