@@ -8,6 +8,8 @@ Check the demo: [https://elshad98.github.io/chat-app](https://elshad98.github.io
 ## Technologies      
 * ES6
 * Babel
+* Webpack
+* React
 
 ## Instructions
 
