@@ -5,12 +5,6 @@ Chat app in which user can join the room and continue chatting with others.
 The main purpose of this application is to learn React.js.  
 Check the demo: [https://elshad98.github.io/chat-app](https://elshad98.github.io/chat-app)       
 
-## Technologies      
-* ES6
-* Babel
-* Webpack
-* React
-
 ## Instructions
 
 First clone this repository.    
