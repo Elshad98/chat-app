@@ -1,0 +1,21 @@
+.message-list {
+    grid-area: m;
+}
+
+.message-list {
+    box-sizing: border-box;
+    padding-left: 6px;
+    width: calc(100% - 15px);
+    height: 100%;
+    overflow-y: auto;
+    background: var(--secondary-color);
+}
+
+.message-list .join-room {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 34px;
+    font-weight: 300;
+}

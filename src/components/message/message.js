@@ -1,7 +1,7 @@
 import React from 'react';
 import './message.css';
 
-function Message(props){
+function Message(props) {
     return (
         <div className="message">
             <div className="message-username">

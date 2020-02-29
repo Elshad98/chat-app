@@ -1,7 +1,9 @@
 import React from 'react';
 
-class NewRoomForm extends React.Component{
-    constructor(){
+import './new-room-message.css';
+
+class NewRoomForm extends React.Component {
+    constructor() {
         super();
 
         this.state = {
@@ -11,13 +13,13 @@ class NewRoomForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(evt){
+    handleChange(evt) {
         this.setState({
             roomName: evt.target.value
         });
     }
 
-    handleSubmit(evt){
+    handleSubmit(evt) {
         evt.preventDefault();
         const roomName = this.state.roomName.trim();
         if (roomName.length > 2) {
@@ -28,20 +30,20 @@ class NewRoomForm extends React.Component{
         }
     }
 
-    render(){
+    render() {
         return (
             <div className="new-room-form">
                 <form onSubmit={this.handleSubmit}>
-                    <input 
+                    <input
                         onChange={this.handleChange}
                         value={this.state.roomName}
-                        type="text" 
+                        type="text"
                         placeholder="Create a room" />
                     <button id="create-room-btn" type="submit">+</button>
                 </form>
             </div>
         );
     }
-} 
+}
 
 export default NewRoomForm;

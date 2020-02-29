@@ -1,0 +1,46 @@
+.rooms-list {
+    grid-area: r;
+}
+
+.rooms-list {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: var(--main-color);
+    height: 100%;
+}
+
+.rooms-list ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: scoll;
+}
+
+.rooms-list li {
+    margin: 12px 0;
+}
+
+.rooms-list h3 {
+    margin: 8px 0 20px;
+    color: var(--secondary-color);
+    font-size: 22px;
+}
+
+.rooms-list .room button {
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+.rooms-list .room.active button {
+    color: var(--secondary-color);
+}
+
+.help-text {
+    position: absolute;
+    top: 10px;
+}

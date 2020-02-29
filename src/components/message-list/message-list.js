@@ -1,25 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Message from './message';
+import Message from '../message';
 
-class MessageList extends React.Component{
-	componentDidUpdate(){
+import './message-list.css';
+
+class MessageList extends React.Component {
+	componentDidUpdate() {
 		const node = ReactDOM.findDOMNode(this);
 		node.scrollTop = node.scrollHeight;
 	}
 
-	renderDisplay(){
-        const messages = this.props.messages;
+	renderDisplay() {
+		const messages = this.props.messages;
 		return (
 			<div className="message-list">
-                {messages.map((message, index) => (
-                    <Message key={index} username={message.senderId} text={message.text} />
+				{messages.map((message, index) => (
+					<Message key={index} username={message.senderId} text={message.text} />
 				))}
 			</div>
 		);
 	}
 
-	renderInfo(){
+	renderInfo() {
 		return (
 			<div className="message-list">
 				<div className="join-room">
@@ -29,7 +31,7 @@ class MessageList extends React.Component{
 		);
 	}
 
-	render(){
+	render() {
 		return this.props.roomId ? this.renderDisplay() : this.renderInfo();
 	}
 }
