@@ -4,6 +4,7 @@ import './room-list.css';
 
 class RoomList extends React.Component {
     render() {
+        console.log('ROOMS', this.props.rooms);
         const orderedRooms = [...this.props.rooms].sort((a, b) => a.id - b.id);
         return (
             <div className="rooms-list">
