@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Message from './Message';
+import Message from './message';
 
 class MessageList extends React.Component{
 	componentDidUpdate(){

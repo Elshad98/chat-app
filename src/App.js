@@ -1,10 +1,10 @@
 import React from 'react';
-import MessageList from './components/MessageList';
-import SendMessageForm from './components/SendMessageForm';
-import RoomList from './components/RoomList';
-import NewRoomForm from './components/NewRoomForm';
+import MessageList from './components/message-list';
+import SendMessageForm from './components/send-message-form';
+import RoomList from './components/room-list';
+import NewRoomForm from './components/new-room-form';
 
-import {instanceLocator, tokenUrl} from './config';
+import APP_CONFIG from './config';
 import { ChatManager, TokenProvider } from '@pusher/chatkit-client';
 import '@atlaskit/css-reset';
 import './styles/index.css';
@@ -27,10 +27,10 @@ class App extends React.Component {
 
     componentDidMount(){
         const chatManager = new ChatManager({
-            instanceLocator: instanceLocator,
+            instanceLocator: APP_CONFIG.instanceLocator,
             userId: 'Perborgen',
             tokenProvider: new TokenProvider({ 
-                url: tokenUrl 
+                url: APP_CONFIG.tokenUrl
             })
         });
         chatManager.connect()
