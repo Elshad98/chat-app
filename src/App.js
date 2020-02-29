@@ -20,10 +20,6 @@ class App extends React.Component {
             joinedRooms: [],
             roomId: null
         };
-        this.sendMessage = this.sendMessage.bind(this);
-        this.subscribeToRoom = this.subscribeToRoom.bind(this);
-        this.getRooms = this.getRooms.bind(this);
-        this.createRoom = this.createRoom.bind(this);
     }
 
     componentDidMount() {
@@ -43,7 +39,7 @@ class App extends React.Component {
             });
     }
 
-    getRooms() {
+    getRooms = () => {
         this.currentUser.getJoinableRooms()
             .then(joinableRooms => {
                 this.setState({
@@ -56,7 +52,7 @@ class App extends React.Component {
             });
     }
 
-    subscribeToRoom(roomId) {
+    subscribeToRoom = (roomId) => {
         this.setState({
             messages: []
         });
@@ -81,14 +77,14 @@ class App extends React.Component {
             })
     }
 
-    sendMessage(text) {
+    sendMessage = (text) => {
         this.currentUser.sendMessage({
             text: text,
             roomId: this.state.roomId
         });
     }
 
-    createRoom(roomName) {
+    createRoom = (roomName) => {
         this.currentUser.createRoom({
             name: roomName
         })

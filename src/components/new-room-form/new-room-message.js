@@ -9,17 +9,15 @@ class NewRoomForm extends React.Component {
         this.state = {
             roomName: ''
         };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(evt) {
+    handleChange = (evt) => {
         this.setState({
             roomName: evt.target.value
         });
     }
 
-    handleSubmit(evt) {
+    handleSubmit = (evt) => {
         evt.preventDefault();
         const roomName = this.state.roomName.trim();
         if (roomName.length > 2) {
