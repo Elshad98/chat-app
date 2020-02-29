@@ -1,9 +1,11 @@
 :root {
-  --main-color: #5ea3d0;
-  --secondary-color: white;
+  --main-color: #334150;
+  --main-background-color: #249AF3;
+  --secondary-color: #fff;
   --main-text-color: #3e5869;
-  --secondary-text-color: #bed5e4;
+  --secondary-text-color: #C8CBCF;
   --send-message-form: #F5F5F5;
+  --secondary-background-color: #F5F6F7;
 }
 
 html, body {
@@ -12,7 +14,7 @@ html, body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
-  color: #3e5869;
+  color: var(--main-text-color);
 }
 
 #root {
@@ -23,4 +25,18 @@ html, body {
 
 form {
   margin: 0;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 22px;
+  background-color: rgba(0,0,0,.3);
+}
+
+.scroll::-webkit-scrollbar-track-piece {
+  border-radius: 22px;
+  background-color: rgba(0,0,0,.1);
 }

@@ -5,10 +5,9 @@
 .message-list {
     box-sizing: border-box;
     padding-left: 6px;
-    width: calc(100% - 15px);
     height: 100%;
     overflow-y: auto;
-    background: var(--secondary-color);
+    background: var(--secondary-background-color);
 }
 
 .message-list .join-room {

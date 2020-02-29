@@ -4,7 +4,6 @@
 
 .rooms-list {
     box-sizing: border-box;
-    padding: 10px;
     background-color: var(--main-color);
     height: 100%;
 }
@@ -12,17 +11,36 @@
 .rooms-list ul {
     list-style-type: none;
     padding: 0;
-    overflow: scoll;
+    margin-bottom: 20px;
 }
 
 .rooms-list li {
-    margin: 12px 0;
+    padding: 10px 0 10px 10%;
+    position: relative;
 }
 
 .rooms-list h3 {
-    margin: 8px 0 20px;
+    padding: 30px 0 15px 0;
     color: var(--secondary-color);
     font-size: 22px;
+    text-align: center;
+    width: 80%;
+    border-bottom: 2px solid #45525F;
+    margin: 0 auto 30px auto;
+}
+
+.rooms-list li.active {
+    background: #3F4D5B;
+}
+
+.rooms-list li.active:before {
+    content: '';
+    background: var(--main-background-color);
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .rooms-list .room button {
@@ -41,6 +59,13 @@
 }
 
 .help-text {
-    position: absolute;
-    top: 10px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.rooms-list.rooms-list-loading {
+    display: flex;
+    align-items: center;
 }

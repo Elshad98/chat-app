@@ -10,7 +10,7 @@
 }
 
 .message .message-text {
-    background: var(--main-color);
+    background: var(--main-background-color);
     color: var(--secondary-color);
     display: inline-block;
     padding: 8px 10px;

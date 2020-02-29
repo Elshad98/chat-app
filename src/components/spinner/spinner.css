@@ -54,7 +54,7 @@
     left: 20px;
     border-radius: 50%;
     border: 8px solid #000;
-    border-color: #7289da transparent #7289da transparent;
+    border-color: var(--main-background-color) transparent var(--main-background-color) transparent;
     -webkit-animation: lds-double-ring 1.9s linear infinite;
     animation: lds-double-ring 1.9s linear infinite;
 }
@@ -64,7 +64,7 @@
     height: 140px;
     top: 30px;
     left: 30px;
-    border-color: transparent #7289da transparent #7289da;
+    border-color: transparent var(--main-background-color) transparent var(--main-background-color);
     -webkit-animation: lds-double-ring_reverse 1.9s linear infinite;
     animation: lds-double-ring_reverse 1.9s linear infinite;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import MessageList from '../message-list';
-import SendMessageForm from '../new-room-form';
+import SendMessageForm from '../send-message-form';
 import RoomList from '../room-list';
 import NewRoomForm from '../new-room-form';
 
@@ -75,7 +75,7 @@ class App extends React.Component {
                 this.getRooms();
             })
             .catch(err => {
-                console.log('Error on subscribing to room: ', err);
+                console.error('Error on subscribing to room: ', err);
             })
     }
 
@@ -92,7 +92,7 @@ class App extends React.Component {
         })
             .then(room => this.subscribeToRoom(room.id))
             .catch(err => {
-                console.log('Error with createRoom: ', err);
+                console.error('Error with createRoom: ', err);
             });
     }
 

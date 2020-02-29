@@ -5,15 +5,17 @@ import Message from '../message';
 import './message-list.css';
 
 class MessageList extends React.Component {
-	componentDidUpdate() {
-		const node = ReactDOM.findDOMNode(this);
-		node.scrollTop = node.scrollHeight;
+	componentDidUpdate(prevProps) {
+		if (prevProps.roomId !== this.props.roomId) {
+			const node = ReactDOM.findDOMNode(this);
+			node.scrollTop = node.scrollHeight;
+		}
 	}
 
 	renderDisplay() {
-		const messages = this.props.messages;
+		const { messages } = this.props;
 		return (
-			<div className="message-list">
+			<div className="message-list scroll">
 				{messages.map((message, index) => (
 					<Message key={index} username={message.senderId} text={message.text} />
 				))}
@@ -23,7 +25,7 @@ class MessageList extends React.Component {
 
 	renderInfo() {
 		return (
-			<div className="message-list">
+			<div className="message-list scroll">
 				<div className="join-room">
 					&larr; Join a room!
 				</div>

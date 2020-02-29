@@ -14,6 +14,8 @@
     border-style: none;
     background: var(--send-message-form);
     font-weight: 200;
+    border-top: 1px solid #E9EEF2;
+    border-left: 1px solid #E9EEF2;
 }
 
 .send-message-form input:focus {
