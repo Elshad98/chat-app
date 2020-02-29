@@ -1,14 +1,16 @@
 import React from 'react';
-import MessageList from './components/message-list';
-import SendMessageForm from './components/send-message-form';
-import RoomList from './components/room-list';
-import NewRoomForm from './components/new-room-form';
+import MessageList from '../message-list';
+import SendMessageForm from '../new-room-form';
+import RoomList from '../room-list';
+import NewRoomForm from '../new-room-form';
 
-import APP_CONFIG from './config';
+import APP_CONFIG from '../../config';
 import { ChatManager, TokenProvider } from '@pusher/chatkit-client';
 import '@atlaskit/css-reset';
-import './styles/reset.css';
-import './styles/index.css';
+
+import '../../styles/reset.css';
+import '../../styles/index.css';
+import './app.css';
 
 
 class App extends React.Component {
