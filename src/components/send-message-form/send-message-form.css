@@ -5,6 +5,8 @@
 .send-message-form {
     background: var(--send-message-form);
     display: flex;
+    position: relative;
+    z-index: 100;
 }
 
 .send-message-form input {
@@ -12,10 +14,10 @@
     padding: 15px 10px;
     margin: 0;
     border-style: none;
-    background: var(--send-message-form);
+    background: var(--secondary-color);
     font-weight: 200;
-    border-top: 1px solid #E9EEF2;
-    border-left: 1px solid #E9EEF2;
+    border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
 }
 
 .send-message-form input:focus {

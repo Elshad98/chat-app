@@ -3,7 +3,7 @@
 }
 
 .new-room-form {
-    padding: 0 5px;
+    padding: 0 8px 0 12px;
     background: var(--secondary-color);
     color: var(--main-text-color);
 }
